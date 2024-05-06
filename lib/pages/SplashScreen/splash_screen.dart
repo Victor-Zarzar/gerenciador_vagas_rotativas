@@ -30,43 +30,35 @@ class _SplashScreenState extends State<SplashScreen> {
                 "Bem Vindo ao Gerenciador \nde Vagas Rotativas :)",
                 style: GoogleFonts.jetBrainsMono(
                   textStyle: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                      color: FontTextColor.primaryColor),
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                    color: FontTextColor.primaryColor,
+                  ),
                 ),
               ),
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: myWidth * 0.14),
-                child: GestureDetector(
-                  onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const HomePage()));
-                  },
-                  child: Container(
-                    decoration: BoxDecoration(
-                      color: SplashColor.primaryColor,
-                    ),
-                    child: Padding(
-                      padding: EdgeInsets.symmetric(
-                        horizontal: myWidth * 0.20,
-                        vertical: myHeight * 0.015,
-                      ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            "Página Inicial",
-                            style: GoogleFonts.jetBrainsMono(
-                              textStyle: TextStyle(
-                                fontSize: 12,
-                                fontWeight: FontWeight.bold,
-                                color: FontTextColor.secondaryColor,
-                              ),
-                            ),
-                          )
-                        ],
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const HomePage()),
+                  );
+                },
+                child: Container(
+                  width: myWidth * 0.4,
+                  height: myHeight * 0.06,
+                  decoration: BoxDecoration(
+                    color: SplashColor.primaryColor,
+                    borderRadius: BorderRadius.circular(12), 
+                  ),
+                  child: Center(
+                    child: Text(
+                      "Página Inicial",
+                      style: GoogleFonts.jetBrainsMono(
+                        textStyle: TextStyle(
+                          fontSize: 12,
+                          fontWeight: FontWeight.bold,
+                          color: FontTextColor.secondaryColor,
+                        ),
                       ),
                     ),
                   ),
