@@ -29,9 +29,9 @@ class _IntroPageState extends State<IntroPage> {
               "Bem Vindo ao Gerenciador \nde Vagas Rotativas :)",
               style: GoogleFonts.jetBrainsMono(
                 textStyle: TextStyle(
-                  fontSize: 15.5,
+                  fontSize: 17.5,
                   fontWeight: FontWeight.bold,
-                  color: FontTextColor.primaryColor,
+                  color: FontTextColor.secondaryColor,
                 ),
               ),
             ),

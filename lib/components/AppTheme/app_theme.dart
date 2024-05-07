@@ -13,7 +13,7 @@ class FontTextColor {
 
   static Color get primaryColor => const Color(0xFF37474F);
 
-  static Color get secondaryColor => const Color(0xffefebe9);
+  static Color get secondaryColor => const Color(0xFFE3F2FD);
 }
 
 class SplashColor {
