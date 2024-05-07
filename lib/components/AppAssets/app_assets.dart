@@ -4,6 +4,6 @@ class ImageOne {
   ImageOne._();
 
   static Image asset() {
-    return Image.asset('lib/assets/splashparking.gif'); 
+    return Image.asset('lib/assets/carparking.png'); 
   }
 }

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gerenciador_vagas_rotativas/pages/SplashScreen/splash_screen.dart';
+import 'package:gerenciador_vagas_rotativas/pages/IntroScreen/intro_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         useMaterial3: false,
       ),
-      home: const SplashScreen(),
+      home: const IntroPage(),
     );
   }
 }
