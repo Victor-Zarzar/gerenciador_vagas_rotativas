@@ -23,3 +23,9 @@ class SplashColor {
 
   static Color get secondaryColor => const Color(0xff0277bd);
 }
+
+class CardColor {
+  CardColor._();
+
+  static Color get primaryColor => const Color(0x00ffffff);
+}
