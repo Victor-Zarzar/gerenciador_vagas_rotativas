@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:gerenciador_vagas_rotativas/components/AppTheme/app_theme.dart';
 import 'package:gerenciador_vagas_rotativas/data/database/database_helper.dart';
 import 'package:gerenciador_vagas_rotativas/data/vacancies/vacancies_app.dart';
+import 'package:getwidget/getwidget.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -31,6 +33,21 @@ class _HomePageState extends State<HomePage> {
     double myHeight = MediaQuery.of(context).size.height;
     double myWidth = MediaQuery.of(context).size.width;
     return Scaffold(
+       appBar: GFAppBar(
+        automaticallyImplyLeading: false,
+        centerTitle: true,
+        backgroundColor: AppTheme.primaryColor,
+        title: Text(
+          'Gerenciador Vagas',
+          style: GoogleFonts.jetBrainsMono(
+            textStyle: TextStyle(
+              fontSize: 16,
+              fontWeight: FontWeight.bold,
+              color: FontTextColor.secondaryColor,
+            ),
+          ),
+        ),
+      ),
       backgroundColor: AppTheme.primaryColor,
       body: ListView.builder(
         itemCount: vacancies.length,

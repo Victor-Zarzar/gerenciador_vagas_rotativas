@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:gerenciador_vagas_rotativas/components/AppAssets/app_assets.dart';
 import 'package:gerenciador_vagas_rotativas/components/AppTheme/app_theme.dart';
 import 'package:gerenciador_vagas_rotativas/pages/HomeScreen/home_screen.dart';
+import 'package:getwidget/getwidget.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class IntroPage extends StatefulWidget {
@@ -29,38 +30,31 @@ class _IntroPageState extends State<IntroPage> {
               "Bem Vindo ao Gerenciador \nde Vagas Rotativas :)",
               style: GoogleFonts.jetBrainsMono(
                 textStyle: TextStyle(
-                  fontSize: 17.5,
-                  fontWeight: FontWeight.bold,
+                  fontSize: 16,
+                  fontWeight: FontWeight.w900,
                   color: FontTextColor.secondaryColor,
                 ),
               ),
             ),
-            GestureDetector(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const HomePage()),
-                );
-              },
-              child: Container(
-                width: myWidth * 0.4,
-                height: myHeight * 0.05,
-                decoration: BoxDecoration(
-                  color: SplashColor.secondaryColor,
-                  borderRadius: BorderRadius.circular(8),
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 60),
+              child: GFButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const HomePage()),
+                  );
+                },
+                text: "Iniciar",
+                textStyle: TextStyle(
+                  color: FontTextColor.secondaryColor,
+                  fontFamily: GoogleFonts.jetBrainsMono().fontFamily,
+                  fontSize: 14,
+                  fontWeight: FontWeight.bold,
                 ),
-                child: Center(
-                  child: Text(
-                    "Página Inicial",
-                    style: GoogleFonts.jetBrainsMono(
-                      textStyle: TextStyle(
-                        fontSize: 11,
-                        fontWeight: FontWeight.bold,
-                        color: FontTextColor.secondaryColor,
-                      ),
-                    ),
-                  ),
-                ),
+                color: ButtonColor.primaryColor,
+                size: GFSize.LARGE,
+                blockButton: true,
               ),
             ),
           ],

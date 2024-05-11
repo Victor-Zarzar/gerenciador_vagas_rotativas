@@ -16,12 +16,10 @@ class FontTextColor {
   static Color get secondaryColor => const Color(0xFFE3F2FD);
 }
 
-class SplashColor {
-  SplashColor._();
+class ButtonColor {
+  ButtonColor._();
 
-  static Color get primaryColor => const Color(0xFF37474F);
-
-  static Color get secondaryColor => const Color(0xff0277bd);
+  static Color get primaryColor => const Color(0xFF0277BD);
 }
 
 class CardColor {
