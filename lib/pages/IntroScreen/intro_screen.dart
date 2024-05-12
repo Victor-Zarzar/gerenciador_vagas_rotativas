@@ -30,32 +30,42 @@ class _IntroPageState extends State<IntroPage> {
               "Bem Vindo ao Gerenciador \nde Vagas Rotativas :)",
               style: GoogleFonts.jetBrainsMono(
                 textStyle: TextStyle(
-                  fontSize: 16,
+                  fontSize: 18,
                   fontWeight: FontWeight.w900,
                   color: FontTextColor.secondaryColor,
                 ),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 60),
-              child: GFButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => const HomePage()),
-                  );
-                },
-                text: "Iniciar",
-                textStyle: TextStyle(
-                  color: FontTextColor.secondaryColor,
-                  fontFamily: GoogleFonts.jetBrainsMono().fontFamily,
-                  fontSize: 14,
-                  fontWeight: FontWeight.bold,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                Text(
+                  "Iniciar",
+                  style: GoogleFonts.jetBrainsMono(
+                    textStyle: TextStyle(
+                      decoration: TextDecoration.underline,
+                      fontSize: 16,
+                      fontWeight: FontWeight.w900,
+                      color: FontTextColor.secondaryColor,
+                    ),
+                  ),
                 ),
-                color: ButtonColor.primaryColor,
-                size: GFSize.LARGE,
-                blockButton: true,
-              ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 60),
+                  child: GFIconButton(
+                    size: GFSize.LARGE,
+                    color: ButtonColor.primaryColor,
+                    shape: GFIconButtonShape.circle,
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => const HomePage()));
+                    },
+                    icon: const Icon(
+                      Icons.arrow_forward,
+                    ),
+                  ),
+                ),
+              ],
             ),
           ],
         ),
